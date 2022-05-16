@@ -1,0 +1,34 @@
+# define
+> Replace the identifier with the given value during pre-processing time.
+> #define SPACE printf(" ")
+> #define ADD(a,b) (a+b)
+
+> defining series of values	
+	#define UART SERIAL_PORT
+	#define SERIAL_PORT DEBUG_PORT
+	#define DEBUG_PORT ERROR_MONITOR
+
+> defining multiple elements in same macro
+  #define ELEMENT 1,2,3
+
+
+> Usages 
+	1. #error
+	2. #ifndef
+ 	   endif
+	3. #undef
+
+> Disadvantages
+	- Will not check for values
+		eg: #define CUBE(a) a*a*a
+
+		    int main()
+		    {
+			printf("%d",CUBE(1+2));
+			return 0;
+		    }
+
+		OUTPUT >>> 7 
+
+> Macro functions vs normal functions
+	ref : https://www.geeksforgeeks.org/macros-vs-functions/

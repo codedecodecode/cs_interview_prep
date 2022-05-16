@@ -1,0 +1,41 @@
+
+-----basic points ----
+
+> Used for small function that uses very often, Especially library functions.
+
+> Increase the execution time.
+
+> During the fuction call the code is replced with inline function.
+
+> Due to this, The code size will increase.
+
+> The key word "static" have to use before inline fuction declaration.
+  Otherwise linker error will occure for GCC compiler.   
+  error >>> "undefined reference to `addition"
+  
+
+
+------Example------
+
+#include <stdio.h>
+
+static inline int addition(int a,int b){
+    
+    return a+b;
+}
+
+int main() {
+	//code
+	printf("sum of 2 and 3 is : %d",addition(2,3));
+	return 0;
+}
+
+output >>> 	sum of 2 and 3 is : 5
+
+
+
+------reference------
+
+> Inline function basics : https://www.geeksforgeeks.org/inline-function-in-c/
+
+> inline function vs normal function : https://www.geeksforgeeks.org/difference-between-inline-and-normal-function-in-cpp/

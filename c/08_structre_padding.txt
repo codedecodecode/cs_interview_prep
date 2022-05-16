@@ -1,0 +1,44 @@
+
+https://www.javatpoint.com/structure-padding-in-c
+
+
+bit field : https://www.geeksforgeeks.org/bit-fields-c/#main
+> Cant take address
+> Cant check size.
+> Can copy to other data type with same size of bit field.
+> bitfield:0 is used for force allighnment of structreu (like padding)
+
+
+#include <stdio.h>
+
+ static unsigned int x;
+typedef struct test {
+    unsigned char len : 2; // len
+    unsigned char start : 2; // start
+    unsigned char end : 3; // end
+}test_t;
+
+typedef union reg8bit {
+    test_t bits;
+    unsigned char reg;
+}reg8bit_t;
+
+int main()
+{
+    reg8bit_t reg1;
+    
+    reg1.reg = 0b11011010;
+    printf("len = %d\n", reg1.bits.len);
+    return 0;
+}
+
+-----------------------------------------------------
+
+typedef union reg8bit {
+    struct  {
+    unsigned char len : 2; // len
+    unsigned char start : 2; // start
+    unsigned char end : 3; // end
+    }bits;
+    unsigned char reg;
+}reg8bit_t;

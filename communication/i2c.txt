@@ -1,0 +1,24 @@
+
+ref_1 : https://aticleworld.com/i2c-interview-questions/
+ref_2 : https://interrupt.memfault.com/blog/i2c-in-a-nutshell#acknack
+
+Points to note
+> Working in half duplex mehtod.
+> addressing mehtods
+> speed levels
+> Bus arbitration
+> Clock synch
+> Clock stretching
+> Hand shaking (Ack and NACK)
+> Repeated start
+
+> How do the read performs
+> How do the write operation 
+> How to read from a internal register of a peripheral
+> HOw 10 bit addressing happen
+
+> How to address the multiple same kind of i2c modules
+ If we need to access the values from two temperature sensors of same model chip
+ There will be a hardware setup to change the address of that modules.
+	eg: RTC ic came with an address of ox1011 0xxx
+ 	we can change this xxx value by changing the resistor or shorting the confiugration pins.

@@ -1,0 +1,3 @@
+> Const volatile temp
+  const is used where it shoudnt change by program (read only).
+  volatile used when any time it change by background prcess or externals.

@@ -1,0 +1,56 @@
+	|		|
+	|		|
+	|---------------|
+	|		|
+	|    stack	|
+	|     		|
+	|    heap	|
+	|		|
+	|---------------|
+	|		|
+	|     BSS	|
+	|		|
+	| uninitialized	|
+	| data segment	|
+	|		|
+	|---------------|
+	|		|
+	| Initialized	|
+	| data segment	|
+	|		|
+	|---------------|
+	|		|
+	| Code segment  |
+	|		|
+	|---------------|
+
+ Code segment
+> Also called text segment.
+> Stored executable instructions.
+
+ Data segment
+> Uninitialized data segment
+> Initialized data segment.
+
+	Initalized data segment
+	> Stored the global and static variables which initialized with a value.
+	> Have both "read only" and "read/write" variables
+	
+	Uninitialized segment
+	> Also known as Block start by symbol.
+	> Global and static variables without initialized to a value stored here.
+	> Kernal will assign "0".
+
+ Stack segment
+> Grow opposite direction of heap.
+> Grow upward or down depends on the architecture.
+> Stack pointer points the address of last pointed stack memory location.
+> A set of values from a function or block stored as a stack frame.
+> Stack store some linking information along with the value. It make the recursion feture possible.
+> For each reccursion a new stack frame is created.
+
+ Heap segment 
+> Grow opposite to stack.
+> Used to store dynamic allocated memroy.
+
+	

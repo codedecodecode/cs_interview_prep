@@ -1,0 +1,68 @@
+
+
+
+	Name		|	segment		|	initialized value	|	scope		|	life		|
+--------------------------------------------------------------------------------------------------------------------------------	
+	auto		|	stack segment	|	garbage			|	within block	|	within block	|
+
+	register	|	stack segment	|	garbage			|	within block	|	within block	|	
+
+	static		|	data segment	|	0			|	within blck	|	entire program	|
+
+	extern		|	data segment	|	0			|	entire program	|	entire program	|
+
+
+
+---------Auto----------
+
+> Local variables will considered in auto.
+
+> This can be manage from outside the block only through pointers.
+
+
+
+--------Register-------
+
+> Uses CPU registers to store the variables.
+
+> Cann't use pointers to this variables.
+
+> The variable will stored in RAM if there is no CPU register available. 
+
+> Limited number of memroy.
+
+> Used when the variable need to access frequently and fastly.
+
+
+--------Static--------
+
+> Practically used to avoid the conflict of using same name for the variables.
+
+> Value of variable will preserved inside the block.
+
+> Variable initialized only once.
+
+> When global variables used with static key word, It cann't access from outside that file(using extern).
+
+> functions are extern by default. Using static keyword infront of function declaration make it as a static function.
+
+> Static fuction will be limited within that page. It helps to reuse the fuction name for other fuctions.
+
+
+--------Extern-------- 
+
+> Used to tell the variable is defined somewhere outside, Not in the same block/file.
+
+> It is used for global variables only.
+
+> All function declarations are extern by default.
+
+> When extern keyword is used, Variable will be considered as declared.
+
+> When extern keyword is used with an initialized value, It will be consider as defined.
+	eg: extern int a = 10;
+
+> We can delare variable multiple times, but can be defined only once.
+
+
+

@@ -1,0 +1,12 @@
+
+> Real time OS is the OS that supports time bounded operations.
+
+> Inter procss communications are semaphore, mutex, message passing, socket , shared memory.
+
+> Keranal is a program that manages everything. It starts first and manages the request from other programs, 
+	and translating them to data processing instruction to CPU.
+	Keranal handles input/output requests and devices program.
+
+> 
+
+ 

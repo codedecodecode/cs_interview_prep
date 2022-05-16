@@ -1,0 +1,11 @@
+
+> Volatile keyword is used where we need to avoid the compiler optimization.
+
+> Sharing the global variables or buffers between the multiple threads.
+
+> Accessing the global variables in an interrupt routine or signal handler.
+
+
+> Used when accessing hardware status register, Memmroy mapped perpherals register.
+
+reference : https://aticleworld.com/rtos-interview-questions/

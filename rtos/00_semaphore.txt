@@ -1,0 +1,33 @@
+Sudo code
+
+Data collection -> Process -> display
+
+1. Data collection
+
+while(1) {
+
+globals = data_read();
+semaphore_post(data_collection_semaphore);
+semaphore_pend(data_display_semaphore, BIOS_WAIT_FOR_EVER); // block
+}
+
+2. Process
+
+while(1) {
+
+if(semaphore_pend(data_collection_semaphore, BIOS_WAIT_FOR_EVER)) {
+data_process();
+semaphore_post(data_process_semaphore);
+}
+
+3. display
+
+while(1) {
+
+if(semaphore_pend(data_process_semaphore, BIOS_WAIT_FOR_EVER)) { // block state
+data_display();
+semaphore_post(data_display_semaphore);
+}
+
+
+------------------------------------------------------------------------------------
